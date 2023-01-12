@@ -11,13 +11,13 @@
         <v-container>
           <v-row my-5>
             <v-col cols="8" offset="1">
-                          <!-- 실행되자마자 입력포커스를 가지도록 autofocus 설정 -->
-            <v-text-field label="할 일" autofocus v-model="sTodoTitle">
-            </v-text-field>
+              <!-- 실행되자마자 입력포커스를 가지도록 autofocus 설정 -->
+              <v-text-field label="할 일" autofocus v-model="sTodoTitle" color="black" >
+              </v-text-field>
             </v-col>
-            <v-col cols="2" my-2>
-              <v-btn fab max-height="50px" max-width="50px" color="black" dark @click="fnSubmitTodo()">
-              <v-icon>add</v-icon>
+            <v-col cols="2" my-2 class="align-self-center">
+              <v-btn fab max-height="30px" max-width="30px" color="black" dark @click="fnSubmitTodo()">
+                <v-icon>add</v-icon>
               </v-btn>
             </v-col>
           </v-row>

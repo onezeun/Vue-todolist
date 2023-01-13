@@ -1,13 +1,11 @@
 <template>
-  <v-app>
+  <v-app style="max-width:640px; margin: auto;">
     <!-- 전체영역을 카드 UI로 변경하여 색상의 일관성 유지 -->
-    <v-card>
-      <v-app-bar color="white">
+    <v-card style="height: 100%;">
+      <v-app-bar elevation="1" color="white">
         <!-- 좌측에 메뉴 아이콘 추가 -->
         <img src="./assets/logo.png" alt="투두리스트" style="width: 30px; height:30px; margin-right: 20px;" />
         <v-toolbar-title>To Do List</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
       </v-app-bar>
       <v-main>
         <v-container>
@@ -23,8 +21,11 @@
               </v-btn>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col cols="12">
+          <v-row style="margin: auto">
+            <p style="margin: 0; font-size: 14px;">할 일 <span style="font-weight:bold">{{ oTodos.length }}</span>개 남음</p>
+          </v-row>
+          <v-row style="margin-top: 0">
+            <v-col cols="12" style="padding: 0 12px 12px">
               <v-list two-line v-for="item in oTodos" :key="item.key">
                 <!-- item.b_edit 값을 통해 읽기 모드인 경우만 표시 -->
                 <v-card flat outlined color="lighten-3" v-if="!item.b_edit">

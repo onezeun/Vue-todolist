@@ -1,6 +1,6 @@
 {
-  "name": "To-Do List",
-  "short_name": "To-Do List",
+  "name": "onezeun-TodoList",
+  "short_name": "onezeun-TodoList",
   "icons": [
     {
      "src": "icons/ms-icon-70x70.png",
@@ -25,7 +25,7 @@
      }
    ],
   "start_url": "./index.html",
-  "orientation": "portait",
+  "display": "standalone",
   "background_color":"#FFFFFF",
   "theme_color":"#FFFFFF"
 }
